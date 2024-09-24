@@ -10,7 +10,7 @@ const LandingPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-20 px-4 h-screen flex items-center justify-center">
+      <header className="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-8 px-4 h-screen flex items-center justify-center">
   <div className="max-w-4xl mx-auto">
     <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Email Marketing Pro</h1>
     <p className="text-xl md:text-2xl mb-8">
