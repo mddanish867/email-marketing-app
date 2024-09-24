@@ -18,12 +18,17 @@ const Navbar = () => {
           <Link to="/">Aether Email</Link>
         </div>
 
+        {/* User Profile Dropdown (Visible on medium and larger screens) */}
+        <div className="hidden">
+          <UserProfileDropdown />
+        </div>
+
         {/* Hamburger Icon for Mobile */}
         <div
           className="md:hidden text-white text-2xl cursor-pointer"
           onClick={toggleMenu}
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {isOpen ? <FaTimes /> :<div className="flex mr-4"> <UserProfileDropdown /> <FaBars /> </div> }
         </div>
 
         {/* Navbar Links */}
@@ -67,7 +72,7 @@ const Navbar = () => {
             >
               Contact us
             </Link>
-          </li>          
+          </li>
           <li className="my-2 md:my-0 w-full text-center md:w-auto">
             <Link
               to="/login"
@@ -77,7 +82,9 @@ const Navbar = () => {
               Login
             </Link>
           </li>
-          <li className="my-2 md:my-0 w-full text-center md:w-auto">
+
+          {/* User Profile Dropdown (Hidden on mobile) */}
+          <li className="hidden md:block my-2 md:my-0 w-full text-center md:w-auto">
             <UserProfileDropdown />
           </li>
         </ul>
