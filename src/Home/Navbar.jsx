@@ -28,7 +28,7 @@ const Navbar = () => {
           className="md:hidden text-white text-2xl cursor-pointer"
           onClick={toggleMenu}
         >
-          {isOpen ? <FaTimes /> :<div className="flex mr-4"> <UserProfileDropdown /> <FaBars /> </div> }
+          {isOpen ? <FaTimes /> :<div className="flex items-center space-x-6 mr-4"> <UserProfileDropdown /> <FaBars /> </div> }
         </div>
 
         {/* Navbar Links */}
