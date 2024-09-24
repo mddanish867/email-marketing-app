@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import UserProfileDropdown from "../UserManagement/UserProfileDropdown";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,25 +19,55 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Icon for Mobile */}
-        <div className="md:hidden text-white text-2xl cursor-pointer" onClick={toggleMenu}>
+        <div
+          className="md:hidden text-white text-2xl cursor-pointer"
+          onClick={toggleMenu}
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
         {/* Navbar Links */}
         <ul
           className={`flex flex-col md:flex-row items-center md:space-x-6 absolute md:static bg-indigo-400 md:bg-transparent w-full md:w-auto left-0 transition-all duration-300 ease-in ${
-            isOpen ? 'top-16 opacity-100' : 'top-[-490px] opacity-0'
+            isOpen ? "top-16 opacity-100" : "top-[-490px] opacity-0"
           } md:opacity-100`}
         >
           <li className="my-2 md:my-0 w-full text-center md:w-auto">
             <Link
-              to="/register"
+              to="/"
               className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
               onClick={toggleMenu}
             >
-              Register
+              Home
             </Link>
           </li>
+          <li className="my-2 md:my-0 w-full text-center md:w-auto">
+            <Link
+              to="/services"
+              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
+              onClick={toggleMenu}
+            >
+              Services
+            </Link>
+          </li>
+          <li className="my-2 md:my-0 w-full text-center md:w-auto">
+            <Link
+              to="/about-us"
+              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
+              onClick={toggleMenu}
+            >
+              About us
+            </Link>
+          </li>
+          <li className="my-2 md:my-0 w-full text-center md:w-auto">
+            <Link
+              to="/contact-us"
+              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
+              onClick={toggleMenu}
+            >
+              Contact us
+            </Link>
+          </li>          
           <li className="my-2 md:my-0 w-full text-center md:w-auto">
             <Link
               to="/login"
@@ -47,40 +78,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="my-2 md:my-0 w-full text-center md:w-auto">
-            <Link
-              to="/forgot-password"
-              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Forgot Password
-            </Link>
-          </li>
-          <li className="my-2 md:my-0 w-full text-center md:w-auto">
-            <Link
-              to="/account-management"
-              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Account Management
-            </Link>
-          </li>
-          <li className="my-2 md:my-0 w-full text-center md:w-auto">
-            <Link
-              to="/role-management"
-              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Role Management
-            </Link>
-          </li>
-          <li className="my-2 md:my-0 w-full text-center md:w-auto">
-            <Link
-              to="/dashboard"
-              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Email Dashboard
-            </Link>
+            <UserProfileDropdown />
           </li>
         </ul>
       </div>

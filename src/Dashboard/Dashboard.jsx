@@ -1,13 +1,5 @@
 import { useState } from "react";
-import CampaignManager from "../CampaignManagement/CampaignManager";
-import TemplateManager from "../CampaignManagement/TemplateManager";
-import EmailEditor from "../CampaignManagement/EmailEditor";
-import EmailScheduler from "../CampaignManagement/EmailScheduler";
-import UTMGenerator from "../CampaignManagement/UTMGenerator";
-import TestEmailSender from "../CampaignManagement/TestEmailSender";
-import ListManager from "../CampaignManagement/ListManager";
-import UTMParameterAdder from "../CampaignManagement/UTMParameterAdder";
-import EmailListSegmentation from "../CampaignManagement/EmailListSegmentation";
+import CampaignManagement from "../CampaignManagement/CampaignManagement";
 import EmailTemplateDesigner from '../TemplateDesigner/EmailTemplateDesigner';
 import SubscriberManagement from '../SubscriberManagement/SubscriberManagement';
 import AnalyticsReporting from '../Analytics/AnalyticsReporting';
@@ -19,15 +11,7 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("campaigns");
 
   const tabs = [
-    { id: "campaigns", label: "Campaigns" },
-    { id: "templates", label: "Templates" },
-    { id: "editor", label: "Email Editor" },
-    { id: "scheduler", label: "Scheduler" },
-    { id: "utm", label: "UTM Generator" },
-    { id: "test", label: "Test Email" },
-    { id: "lists", label: "Email Lists" },
-    { id: "utm", label: "UTM Parameters" },
-    { id: "segmentation", label: "List Segmentation" },
+    { id: "campaigns", label: "Campaigns Management" },    
     { id: 'templates', label: 'Email Templates' },
     { id: 'subscribers', label: 'Subscriber Management' },
     { id: 'analytics', label: 'Analytics & Reporting' },
@@ -71,15 +55,7 @@ export default function Dashboard() {
           </div>
 
           <div className="mt-6">
-            {activeTab === "campaigns" && <CampaignManager />}
-            {activeTab === "templates" && <TemplateManager />}
-            {activeTab === "editor" && <EmailEditor />}
-            {activeTab === "scheduler" && <EmailScheduler />}
-            {activeTab === "utm" && <UTMGenerator />}
-            {activeTab === "test" && <TestEmailSender />}
-            {activeTab === "lists" && <ListManager />}
-            {activeTab === "utm" && <UTMParameterAdder />}
-            {activeTab === "segmentation" && <EmailListSegmentation />}
+            {activeTab === "campaigns" && <CampaignManagement />}            
             {activeTab === 'templates' && <EmailTemplateDesigner />}
             {activeTab === 'subscribers' && <SubscriberManagement />}
             {activeTab === 'analytics' && <AnalyticsReporting />}

@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 const LandingPage = () => {
   return (
     <>
-      <Navbar />
 
       {/* Hero Section */}
       <header className="h-screen bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-20 px-4">
