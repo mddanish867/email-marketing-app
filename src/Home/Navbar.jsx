@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-600 to-indigo-400 p-4 sticky top-0 z-50">
+    <nav className="bg-gradient-to-r from-indigo-600 to-indigo-400 p-4 sticky top-0 z-50 border-b border-indigo-400">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-white text-2xl font-bold">
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <ul
-          className={`flex flex-col md:flex-row items-center md:space-x-6 absolute md:static bg-gradient-to-r from-indigo-600 to-indigo-400 md:bg-transparent w-full md:w-auto left-0 transition-all duration-300 ease-in ${
+          className={`flex flex-col md:flex-row items-center md:space-x-6 absolute md:static bg-indigo-400 md:bg-transparent w-full md:w-auto left-0 transition-all duration-300 ease-in ${
             isOpen ? 'top-16 opacity-100' : 'top-[-490px] opacity-0'
           } md:opacity-100`}
         >

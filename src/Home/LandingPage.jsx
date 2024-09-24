@@ -16,7 +16,7 @@ const LandingPage = () => {
           <p className="text-xl md:text-2xl mb-8">
             The most powerful, intuitive, and effective email marketing solution designed to grow your business.
           </p>
-          <button className="bg-white h-12 text-violet-500 font-bold py-2 px-6 rounded-md transition-transform transform hover:scale-105 hover:bg-transparent hover:text-white hover:border">
+          <button className="bg-white h-14 mt-10 text-violet-500 font-bold py-2 px-6 rounded-md transition-transform transform hover:scale-105 hover:bg-transparent hover:text-white hover:border">
             Get Started for Free
           </button>
         </div>
