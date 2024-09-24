@@ -6,6 +6,7 @@ import ForgotPassword from './UserManagement/ForgotPassword';
 import ResetPassword from './UserManagement/ResetPassword';
 import AccountManagement from './UserManagement/EditProfile';
 import RoleManagement from './UserManagement/RoleManagement';
+import Dashboard from './Dashboard/Dashboard';
 function App() {
 
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/account-management" element={<AccountManagement />} />
           <Route path="/role-management" element={<RoleManagement />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+
         </Routes>      
     </div>
   </Router>

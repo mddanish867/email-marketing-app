@@ -73,6 +73,15 @@ const Navbar = () => {
               Role Management
             </Link>
           </li>
+          <li className="my-2 md:my-0 w-full text-center md:w-auto">
+            <Link
+              to="/dashboard"
+              className="text-white hover:text-gray-200 transition-colors duration-300 block md:inline-block px-4 py-2"
+              onClick={toggleMenu}
+            >
+              Email Dashboard
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
