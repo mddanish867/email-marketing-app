@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-white text-2xl font-bold">
-          <Link to="/">Email Marketing</Link>
+          <Link to="/">Aether Email</Link>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <ul
-          className={`flex flex-col md:flex-row items-center md:space-x-6 absolute md:static bg-indigo-600 md:bg-transparent w-full md:w-auto left-0 transition-all duration-300 ease-in ${
+          className={`flex flex-col md:flex-row items-center md:space-x-6 absolute md:static bg-gradient-to-r from-indigo-600 to-indigo-400 md:bg-transparent w-full md:w-auto left-0 transition-all duration-300 ease-in ${
             isOpen ? 'top-16 opacity-100' : 'top-[-490px] opacity-0'
           } md:opacity-100`}
         >
