@@ -10,17 +10,18 @@ const LandingPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Email Marketing Pro</h1>
-          <p className="text-xl md:text-2xl mb-8">
-            The most powerful, intuitive, and effective email marketing solution designed to grow your business.
-          </p>
-          <button className="bg-white h-12 text-violet-500 font-bold py-2 px-6 rounded-md transition-transform transform hover:scale-105 hover:bg-transparent hover:text-white hover:border">
-            Get Started for Free
-          </button>
-        </div>
-      </header>
+      <header className="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-20 px-4 h-screen flex items-center justify-center">
+  <div className="max-w-4xl mx-auto">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Email Marketing Pro</h1>
+    <p className="text-xl md:text-2xl mb-8">
+      The most powerful, intuitive, and effective email marketing solution designed to grow your business.
+    </p>
+    <button className="bg-white h-12 text-violet-500 font-bold py-2 px-6 rounded-md transition-transform transform hover:scale-105 hover:bg-transparent hover:text-white hover:border">
+      Get Started for Free
+    </button>
+  </div>
+</header>
+
 
       {/* Features Section */}
       <section className="bg-white py-16 px-4">
