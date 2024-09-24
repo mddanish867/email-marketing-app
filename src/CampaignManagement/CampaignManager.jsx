@@ -18,7 +18,7 @@ export default function CampaignManager() {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">Campaign Manager</h2>
+      <h2 className="text-2xl font-bold mb-4 text-indigo-900">Campaign Manager</h2>
       <div className="mb-6">
         <input
           type="text"
@@ -35,7 +35,7 @@ export default function CampaignManager() {
           onChange={(e) => setNewCampaign({ ...newCampaign, subject: e.target.value })}
         />
         <button
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+          className="w-full bg-gradient-to-r from-indigo-600 to-indigo-200 text-white p-2 rounded"
           onClick={addCampaign}
         >
           Add Campaign
@@ -44,7 +44,7 @@ export default function CampaignManager() {
       <div className="overflow-x-auto">
         <table className="min-w-full">
           <thead>
-            <tr className="bg-gray-100">
+            <tr className="bg-gray-50 text-indigo-900">
               <th className="px-4 py-2 text-left">Name</th>
               <th className="px-4 py-2 text-left">Subject</th>
               <th className="px-4 py-2 text-left">Status</th>
@@ -58,7 +58,7 @@ export default function CampaignManager() {
                 <td className="px-4 py-2">{campaign.subject}</td>
                 <td className="px-4 py-2">{campaign.status}</td>
                 <td className="px-4 py-2">
-                  <button className="text-blue-500 hover:text-blue-700 mr-2">Edit</button>
+                  <button className="text-indigo-500 hover:text-indigo-700 mr-2">Edit</button>
                   <button className="text-red-500 hover:text-red-700">Delete</button>
                 </td>
               </tr>
