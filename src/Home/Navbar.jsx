@@ -19,16 +19,15 @@ const Navbar = () => {
         </div>
 
         {/* User Profile Dropdown (Visible on medium and larger screens) */}
-        <div className="hidden">
+        <div className="md:hidden flex items-center space-x-4 ml-auto">
           <UserProfileDropdown />
-        </div>
-
-        {/* Hamburger Icon for Mobile */}
-        <div
-          className="md:hidden text-white text-2xl cursor-pointer"
-          onClick={toggleMenu}
-        >
-          {isOpen ? <FaTimes /> :<div className="flex items-center space-x-6 mr-4"> <UserProfileDropdown /> <FaBars /> </div> }
+          {/* Hamburger Icon for Mobile */}
+          <div
+            className="text-white text-2xl cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </div>
         </div>
 
         {/* Navbar Links */}
